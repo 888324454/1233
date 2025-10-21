@@ -1,0 +1,9 @@
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.destantun.instagem",
+    "sha256_cert_fingerprints":
+    ["9A:F6:3C:9F:89:E3:78:32:86:F7:53:D3:59:6B:8F:F1:1A:1C:1B:3D:2A:4F:2E:CB:BE:6A:D0:65:4E:91:82:A4"]
+  }
+}

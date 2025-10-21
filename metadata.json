@@ -1,0 +1,5 @@
+{
+  "name": "Copy of InstaGem",
+  "description": "A visually appealing, Instagram-like web application that allows users to create posts and generate captions for their images using the Gemini API.",
+  "requestFramePermissions": []
+}
