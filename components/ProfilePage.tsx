@@ -101,13 +101,17 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ user, posts, onPostClick, wal
               className="relative aspect-square cursor-pointer group"
               onClick={() => onPostClick(post)}
             >
-              <img src={post.media[0].url} alt={post.caption} className="w-full h-full object-cover" />
+              {post.media[0].type === 'image' ? (
+                <img src={post.media[0].url} alt={post.caption} className="w-full h-full object-cover" />
+              ) : (
+                <video src={post.media[0].url} className="w-full h-full object-cover bg-gray-900"></video>
+              )}
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
               
               {post.media[0].type === 'video' && (
                 <VideoCameraIcon className="absolute top-2 right-2 h-5 w-5 text-white drop-shadow-lg" />
               )}
-               {post.media.length > 1 && (
+               {post.media.length > 1 && post.media[0].type !== 'video' && (
                  <PhotoIcon className="absolute top-2 right-2 h-5 w-5 text-white drop-shadow-lg" />
               )}
             </div>

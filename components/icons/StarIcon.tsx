@@ -1,11 +1,13 @@
 import React from 'react';
 
-export const StarIcon: React.FC<{ className?: string }> = ({ className = "h-6 w-6" }) => (
+// FIX: Update component props to accept standard SVG attributes like 'title'.
+export const StarIcon: React.FC<{ className?: string } & React.ComponentPropsWithoutRef<'svg'>> = ({ className = "h-6 w-6", ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="currentColor"
     className={className}
+    {...props}
   >
     <path
       fillRule="evenodd"

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { generateCaptionFromImage } from '../services/geminiService';
+import { generateCaptionFromImage } from '../geminiService';
 import { type Post, type MediaItem } from '../types';
 import { ExclamationCircleIcon } from './icons/ExclamationCircleIcon';
 import { ChevronLeftIcon } from './icons/ChevronLeftIcon';
@@ -164,7 +164,7 @@ const CreatePostModal: React.FC<CreatePostModalProps> = ({ onClose, onAddPost })
                                         {media.type === 'image' ? (
                                             <img src={media.url} alt={`Preview slide ${index + 1}`} className="w-full h-full object-contain" />
                                         ) : (
-                                            <video src={media.url} muted playsInline loop className="w-full h-full object-contain" />
+                                            <video src={media.url} muted playsInline loop autoPlay className="w-full h-full object-contain" />
                                         )}
                                     </div>
                                 ))}
